@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Reporting Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        #otherIssue {
+            display: none;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Report an Issue</h2>
+    <form id="reportForm" action="save_issue.php" method="POST" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="issueType">Type of Issue:</label>
+            <select id="issueType" name="issueType" onchange="toggleOtherInput()" required>
+                <option value="">Select an issue</option>
+                <option value="file_upload">File is not uploading</option>
+                <option value="incorrect_output">Showing incorrect output</option>
+                <option value="wrong_graph">Wrong graph is plotted</option>
+                <option value="runtime_error">Run time error</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="otherIssue">
+            <label for="otherDescription">Please describe the issue (max 1000 words):</label>
+            <textarea id="otherDescription" name="otherDescription" rows="5" maxlength="1000"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function toggleOtherInput() {
+            const issueType = document.getElementById('issueType').value;
+            const otherIssueDiv = document.getElementById('otherIssue');
+            if (issueType === 'other') {
+                otherIssueDiv.style.display = 'block';
+            } else {
+                otherIssueDiv.style.display = 'none';
+            }
+        }
+
+        function validateForm() {
+            const fullName = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const issueType = document.getElementById('issueType').value;
+            const otherDescription = document.getElementById('otherDescription').value;
+
+            // Basic validation
+            if (!fullName || !phone || !email || !issueType) {
+                alert('Please fill in all required fields');
+                return false;
+            }
+
+            // Phone number validation (10 digits)
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid 10-digit phone number');
+                return false;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            // If "other" is selected, require description
+            if (issueType === 'other' && !otherDescription.trim()) {
+                alert('Please describe the issue in the text box');
+                return false;
+            }
+
+            alert('Form submitted successfully!');
+            return true;
+        }
+    </script>
+    
+</body>
+</html>
