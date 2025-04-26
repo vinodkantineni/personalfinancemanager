@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager </title>
+    <link rel="stylesheet" href="index.css">
+</head>  
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"> Personal Finance Manager</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="contactus.html" class="btn-login">Contact</a></li>
+                    <li><a href="profile.html" class="btn-login">profile</a></li>
+                </ul>
+               
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h5>Upload Your File</h5>
+            <form id="upload-form" enctype="multipart/form-data">
+               <input type="file" id="file-input" name="file" required>
+               <button type="submit" class="btn-signup">Upload</button>
+             </form>
+        </div>
+        <p id="message"></p>
+ 
+    <h2>Your Uploaded Files</h2>
+    <ul id="file-list"></ul>
+    <script src="upload.js"></script>
+    <button class="btn-login">Cash</button>
+    <button class="btn-login">Any Card</button>
+    </main>
+    <footer >
+        <div >
+            <p>Follow Us</p>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+                <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+                <a href="https://youtube.com" target="_blank">▶ YouTube</a>
+            </div>
+            <p>&copy; 2025 Personal Finance Manager. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

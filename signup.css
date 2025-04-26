@@ -1,0 +1,83 @@
+/* Dropdown Menu */
+.menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    right: 0;
+    list-style: none;
+    padding: 10px;
+}
+
+.menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li a {
+    color: black;
+    text-decoration: none;
+}
+
+/* FORM STYLING */
+.form-container {
+    background: white;
+    padding: 20px;
+    margin: 50px auto;
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Password Show/Hide */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+/* Button Styling */
+button {
+    width: 90%;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #00d4ff;
+}
+
+button:hover {
+    background-color: #002b5c;
+}

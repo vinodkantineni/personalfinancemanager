@@ -1,0 +1,91 @@
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('image.jpg') no-repeat center center/cover;
+    filter: brightness(8px); /* Reduce brightness */
+    
+}
+
+.hero h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0a7aea;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+    color: #13adad;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00d4ff;
+    color: #001f3f;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #49a9d2;
+    color: white;
+}
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+}
+
+.features h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #004080;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: #040404;
+
+}
+
+.feature {
+    max-width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature i {
+    font-size: 45px;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.feature h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.footer {
+    background: linear-gradient(to right, #001f3f, #004080);
+    color: white;
+    text-align: center;
+    position: absolute;
+    padding: 5px 0;
+    width: 100%;
+}

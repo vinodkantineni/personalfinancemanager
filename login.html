@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Personal Finance Manager</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
+    <!-- Google reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personal Finance Manager</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="welcome.html" class="btn-login">Home</a></li>
+                    <li><a href="signup.html" class="btn-login">Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="form-container">
+        <h2>Login</h2>
+        <form id="login-form" action="login.php" method="POST">
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" style="cursor: pointer;">👁</span>
+            </div>
+
+            <!-- 🛡️ Google reCAPTCHA widget -->
+            <div class="g-recaptcha" data-sitekey="6LfpoCArAAAAAHQQqApGMaN_mdX0R6xOusHe3vs7"></div>
+            <br>
+
+            <a href="forpass.html" class="forgot-password-link">Forgot password?</a>
+            <button type="submit">Login</button>
+        </form>        
+        <p id="error-message"></p>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Follow Us</p>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+                <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+                <a href="https://youtube.com" target="_blank">▶ YouTube</a>
+            </div>
+            <p>&copy; 2025 Personal Finance Manager. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script defer src="forgot_password.js"></script>
+</body>
+</html>

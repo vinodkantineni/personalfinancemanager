@@ -1,0 +1,136 @@
+ nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.head-container {
+    position: absolute;
+    top: 10%; /* 15% from the top */
+    right: 5%; /* 5% from the right */
+}
+footer {
+    position: fixed;
+    bottom: -2%;
+    left: 0;
+    width: 100%;
+    background-color: #222; /* Adjust color as needed */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+/* Contact Section */
+.contact-container {
+    max-width: 480px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #87ec1c;
+}
+
+.contact-container p {
+    font-size: 18px;
+}
+/* Chatbot */
+#chatbot-container {
+    position: fixed;
+    bottom: 45px;
+    right: 5px;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+#chatbot-header {
+    background: #07e1c0;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+#chatbot-body {
+    display: none;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 350px;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+#chatbot-messages {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+}
+
+#chatbot-input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#chatbot-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    font-size: 14px;
+}
+#chatbot-send {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#chatbot-send:hover {
+    background: #00264d;
+}
+
+.chatbot-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+.user-message {
+    background: #004080;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+}
+.bot-message {
+    background: #f1f1f1;
+    align-self: flex-start;
+}
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager | Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="welocome.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="livebot.js"></script>
+</head>  
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"> Personal Finance Manager</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="contactus.html" class="btn-login">Contact</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                    <li><a href="signup.html" class="btn-login">Signup</a></li>
+                </ul>
+               
+            </nav>
+        </div>
+    </header>
+    
+
+    <main class="hero">
+        <div class="container">
+            <h2>Take Control of Your Finances</h2>
+            <p>Track, manage, and optimize your expenses with ease.</p>
+            <a href="login.html" class="btn-primary">Get Started</a>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="container">
+            <h3>Why Choose Finance Manager?</h3>
+            <div class="feature-grid">
+                <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Real-Time Tracking*</h4>
+                    <p>Monitor your expenses and savings anytime, anywhere.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <h4>Secure & Private</h4>
+                    <p>Your financial data is encrypted and protected.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Easy to Use</h4>
+                    <p>Intuitive interface designed for simplicity and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="chatbot-container">
+        <div id="chatbot-header">💬 Chat with Us</div>
+        <div id="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <div id="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Type a message..." />
+                <button id="chatbot-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="footer">
+            <p>Follow Us</p>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+                <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+                <a href="https://youtube.com" target="_blank">▶ YouTube</a>
+            </div>
+            <p>&copy; 2025 Personal Finance Manager. All rights reserved.</p>
+        </div>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

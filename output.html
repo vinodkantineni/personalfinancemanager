@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager </title>
+    <link rel="stylesheet" href="index.css">
+</head>  
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"> Personal Finance Manager</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="contactus.html" class="btn-login">Contact</a></li>
+                    <li><a href="profile.html" class="btn-login">profile</a></li>
+                </ul>
+               
+            </nav>
+        </div>
+    </header>
+    <h1>Transaction Analysis</h1>
+    <h2>Number of Transactions Over Time</h2>
+    <img src="uploads/transactions_plot.png" alt="Transactions Plot" width="80%">
+    <h2>Total Money Spent per Category</h2>
+    <img src="uploads/category_expense_plot.png" alt="Category Expense Plot" width="80%">
+    <h2>Total Money Received per Person</h2>
+    <img src="uploads/received_amount_plot.png" alt="Received Amount Plot" width="80%">
+    <footer>
+            <p>Follow Us</p>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+                <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+                <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+                <a href="https://youtube.com" target="_blank">▶ YouTube</a>
+            </div>
+            <p>&copy; 2025 Personal Finance Manager. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

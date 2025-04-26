@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        img { max-width: 80%; height: auto; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Financial Report</h1>
+    
+    <h2>1. Total Expense by Category</h2>
+    <img src="uploads\category_expense_plot.png" alt="Category Expense">
+
+    <h2>2. Total Money Received per Sender</h2>
+    <img src="uploads\received_amount_plot.png" alt="Money Received per Sender">
+
+    <h2>3. Total Money Sent per Person</h2>
+    <img src="uploads\sent_amount_plot.png" alt="Money Sent per Person">
+
+    <h2>4. Overall Money Flow by Category</h2>
+    <img src="uploads\category_balance_plot.png" alt="Overall Money Flow">
+
+    <h2>5. Sent Transactions Summary</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Amount (₹)</th>
+    </tr>
+    <tr>
+      <th>Sent To</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Unknown</th>
+      <td>44805.5</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>6. Received Transactions Summary</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Amount (₹)</th>
+    </tr>
+    <tr>
+      <th>Received From</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Y Jyoshitha Rao</th>
+      <td>100.0</td>
+    </tr>
+    <tr>
+      <th>Shravani AU</th>
+      <td>300.0</td>
+    </tr>
+    <tr>
+      <th>Pichi Pavani</th>
+      <td>380.0</td>
+    </tr>
+    <tr>
+      <th>Best Bunny</th>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>Harinath Reddy</th>
+      <td>2501.0</td>
+    </tr>
+    <tr>
+      <th>nanna</th>
+      <td>3000.0</td>
+    </tr>
+    <tr>
+      <th>Pushpak AU</th>
+      <td>8599.0</td>
+    </tr>
+    <tr>
+      <th>Suriya Frd</th>
+      <td>25000.0</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

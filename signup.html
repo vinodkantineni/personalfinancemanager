@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Personal Finance Manager</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personal Finance Manager</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="upload.html" class="btn-login">Home</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="form-container">
+        <h2>Signup</h2>
+        <form id="signup-form" action="signup.php" method="POST">
+            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="text" name="user_id" id="userid" placeholder="User ID" required> <!-- Changed to user_id -->
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" style="cursor: pointer;">👁</span>
+            </div>
+            <button type="submit">Signup</button>
+        </form> 
+        <p id="error-message"></p>
+        <p>If you have an account? <a href="login.html">login</a></p>
+    </main>
+    <footer>
+        <p>Follow Us:</p>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+            <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+            <a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a>
+            <a href="https://youtube.com" target="_blank">▶ YouTube</a>
+        </div>
+        <p>© 2025 Personal Finance Manager. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const phoneInput = document.getElementById("phone");
+            phoneInput.addEventListener("input", (event) => {
+                let value = phoneInput.value;
+                if (!value.startsWith("+91")) {
+                    phoneInput.value = "+91";
+                }
+                phoneInput.value = "+91" + value.slice(3).replace(/\D/g, "").slice(0, 10);
+            });
+            phoneInput.addEventListener("keydown", (event) => {
+                if ((phoneInput.selectionStart < 3 && event.key === "Backspace") || event.key === "Delete") {
+                    event.preventDefault();
+                }
+            });
+        });
+        document.querySelector(".toggle-password").addEventListener("click", function () {
+            const passwordField = document.getElementById("password");
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        });
+    </script>
+</body>
+</html>
